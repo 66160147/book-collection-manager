@@ -1,12 +1,44 @@
-# React + Vite
+# Book Collection Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+แอปพลิเคชันจัดการคอลเลกชันหนังสือส่วนตัว พัฒนาด้วย React และ Vite
 
-Currently, two official plugins are available:
+## คุณสมบัติ
+- เพิ่ม/แก้ไข/ลบหนังสือในคอลเลกชัน
+- ค้นหาหนังสือตามชื่อ
+- กรองหนังสือตามหมวดหมู่
+- ดูรายละเอียดหนังสือแต่ละเล่ม
+- หน้าแรกแสดงสถิติและหนังสือล่าสุด
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## การติดตั้ง
+- คลอนโปรเจค: `git clone <repository-url>`
+- เข้าโฟลเดอร์: `cd book-collection-manager`
+- ติดตั้ง dependencies: `npm install`
+- รันโปรเจค: `npm run dev`
+- เปิดในเบราว์เซอร์: `http://localhost:5173`
 
-## Expanding the ESLint configuration
+## การใช้งาน
+- หน้าแรก: `/` - ดูภาพรวมคอลเลกชัน
+- รายการหนังสือ: `/books` - ค้นหา/กรอง/ลบ
+- รายละเอียด: `/books/:id` - ดู/แก้ไข/ลบหนังสือ
+- เพิ่มหนังสือ: `/books/add` - กรอกข้อมูลใหม่
+- แก้ไข: `/books/edit/:id` - อัปเดตข้อมูล
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## โครงสร้างโปรเจค
+- `src/components/` - คอมโพเนนต์ที่ใช้ซ้ำ (เช่น BookCard, BookForm)
+- `src/hooks/` - Custom Hooks (เช่น useBooks)
+- `src/pages/` - หน้าเพจหลัก (เช่น HomePage, ListBooks)
+- `src/utils/` - ฟังก์ชันช่วยเหลือ (เช่น constants.js)
+
+## เทคโนโลยี
+- React + Vite
+- React Router DOM
+- LocalStorage สำหรับเก็บข้อมูล
+- CSS Inline (ปรับแต่งเพิ่มได้)
+
+## หมายเหตุ
+- ข้อมูลทั้งหมดเก็บใน localStorage
+- รองรับ Responsive Design
+- ปรับแต่ง UI ได้ตามต้องการ
+
+## ผู้พัฒนา
+- [ชื่อคุณ] - [อีเมลหรือ GitHub ของคุณ]
